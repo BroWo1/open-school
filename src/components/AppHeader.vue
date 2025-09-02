@@ -16,10 +16,10 @@
       </div>
       <RouterLink
         to="/"
-        class="inline-flex items-baseline text-2xl font-bold text-base-content px-2 py-1 rounded-md transition-colors duration-150 hover:bg-base-200 focus-visible:bg-base-200"
+        class="inline-flex items-center px-2 py-1 rounded-md transition-colors duration-150 hover:bg-base-200 focus-visible:bg-base-200"
+        aria-label="OpenTHIS Home"
       >
-        Open
-        <span class="text-primary">THIS</span>
+        <img :src="logoUrl" alt="OpenTHIS logo" class="h-8 w-auto" />
       </RouterLink>
     </div>
     
@@ -38,4 +38,9 @@
       </div>
     </div>
   </header>
+  
 </template>
+
+<script setup>
+import logoUrl from '@/assets/openthis.png'
+</script>

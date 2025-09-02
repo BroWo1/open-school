@@ -1,5 +1,6 @@
 <script setup>
 import { ref, computed } from 'vue'
+import heroLogo from '@/assets/openthistext.png'
 
 const query = ref('')
 const messages = ref([]) // { role: 'user'|'assistant', text: string }
@@ -56,9 +57,9 @@ function clearAll() {
     <div class="hero py-16">
       <div class="hero-content text-center px-6">
         <div class="max-w-4xl">
-          <h1 class="text-4xl lg:text-6xl font-bold text-base-content mb-4 text-balance">
-            Open<span class="text-primary">THIS</span>
-          </h1>
+          <div class="mb-6 flex justify-center">
+            <img :src="heroLogo" alt="OpenTHIS" class="h-14 lg:h-20 w-auto" />
+          </div>
           
           <!-- Assistant input -->
           <div class="max-w-4xl mx-auto mb-12 py-8">
