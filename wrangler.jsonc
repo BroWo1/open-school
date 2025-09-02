@@ -1,0 +1,10 @@
+{
+  "name": "openthis",
+  "compatibility_date": "2025-09-02",
+  "main": "worker/index.js",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS"
+  }
+}
+
