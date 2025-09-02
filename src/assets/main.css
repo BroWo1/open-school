@@ -1,0 +1,86 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Custom theme configuration for minimalistic black and white */
+:root {
+  --rounded-box: 0.5rem;
+  --rounded-btn: 0.25rem;
+  --rounded-badge: 0.25rem;
+  --animation-btn: 0.15s;
+  --animation-input: 0.15s;
+  --btn-text-case: uppercase;
+  --btn-focus-scale: 0.95;
+  --border-btn: 1px;
+  --tab-border: 1px;
+  --tab-radius: 0.25rem;
+}
+
+[data-theme="light"] {
+  --color-primary: #000000;
+  --color-primary-content: #ffffff;
+  --color-secondary: #404040;
+  --color-secondary-content: #ffffff;
+  --color-accent: #666666;
+  --color-accent-content: #ffffff;
+  --color-neutral: #2a2a2a;
+  --color-neutral-content: #ffffff;
+  --color-base-100: #ffffff;
+  --color-base-200: #f8f8f8;
+  --color-base-300: #e8e8e8;
+  --color-base-content: #000000;
+  --color-info: #333333;
+  --color-info-content: #ffffff;
+  --color-success: #000000;
+  --color-success-content: #ffffff;
+  --color-warning: #666666;
+  --color-warning-content: #ffffff;
+  --color-error: #000000;
+  --color-error-content: #ffffff;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-base-200);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-base-300);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Subtle interactions */
+.btn:hover {
+  opacity: 0.9;
+}
+
+.card:hover {
+  border-color: var(--color-base-300);
+}
+
+/* Subtle grid background + radial fade utilities used in hero */
+.bg-grid {
+  background-color: var(--color-base-100);
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.15;
+}
+
+.bg-radial-fade {
+  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.95) 40%, rgba(0,0,0,0) 80%);
+  mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.95) 40%, rgba(0,0,0,0) 80%);
+}

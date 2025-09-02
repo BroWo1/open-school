@@ -1,0 +1,45 @@
+{
+  "school": {
+    "name": "OpenTHIS International High School",
+    "location": "Shanghai, China",
+    "timezone": "Asia/Shanghai"
+  },
+  "overview": {
+    "students": 1200,
+    "faculty": 120,
+    "student_teacher_ratio": "8:1",
+    "boarding_percentage": 40,
+    "languages_offered": ["English", "Mandarin Chinese", "Spanish"],
+    "clubs": 65,
+    "programs": ["IB Diploma", "AP Courses"],
+    "graduation_rate": 98
+  },
+  "academics": {
+    "ib": {
+      "average_score": 35,
+      "pass_rate": 92,
+      "max_score": 45
+    },
+    "ap": {
+      "exams_taken": 1600,
+      "pass_rate": 88
+    },
+    "university_acceptance": {
+      "overall_rate": 95,
+      "top_100_rate": 78,
+      "top_destinations": ["US", "UK", "Canada", "Hong Kong", "Australia"]
+    }
+  },
+  "diversity": {
+    "nationalities_count": 60,
+    "top_nationalities": [
+      {"country": "China (Mainland)", "percent": 52},
+      {"country": "South Korea", "percent": 10},
+      {"country": "United States", "percent": 8},
+      {"country": "Japan", "percent": 6},
+      {"country": "Canada", "percent": 4}
+    ]
+  },
+  "last_updated": "2025-08-15"
+}
+
