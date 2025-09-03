@@ -1,14 +1,14 @@
 export default {
   async fetch(request, env) {
-    // First, attempt to serve the exact static asset.
+    // Try to serve the exact static asset first.
     const res = await env.ASSETS.fetch(request);
 
-    // If the asset wasn't found and it's a navigation request, return index.html
-    if (res.status === 404 && request.method === 'GET') {
+    // SPA fallback: if not found and it's a navigation request, serve index.html
+    if (res.status === 404 && (request.method === 'GET' || request.method === 'HEAD')) {
       const accept = request.headers.get('accept') || '';
       if (accept.includes('text/html')) {
-        const url = new URL(request.url);
-        const indexReq = new Request(new URL('/index.html', url.origin), request);
+        // Use relative index.html, preserving the original request’s URL origin
+        const indexReq = new Request(new URL('index.html', request.url), request);
         return env.ASSETS.fetch(indexReq);
       }
     }
@@ -16,4 +16,3 @@ export default {
     return res;
   }
 };
-
