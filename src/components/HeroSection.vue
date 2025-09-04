@@ -1,6 +1,8 @@
 <script setup>
 import { ref, computed } from 'vue'
 import heroLogo from '@/assets/openthistext.png'
+import oppositionLogo from '@/assets/oppositiontransparent.png'
+import gpeLogo from '@/assets/gpe3.png'
 
 const query = ref('')
 const messages = ref([]) // { role: 'user'|'assistant', text: string }
@@ -62,7 +64,7 @@ function clearAll() {
           </div>
           
           <!-- Assistant input -->
-          <div class="max-w-4xl mx-auto mb-12 py-8">
+          <div class="max-w-4xl mx-auto mb-20 py-4">
             <label class="text-sm text-base-content/60 sr-only">Ask the assistant</label>
             <div class="relative w-full">
               <input
@@ -118,9 +120,18 @@ function clearAll() {
             with a focus on academic excellence and student well‑being.
           </p>
 
-          <div class="flex flex-col sm:flex-row gap-3 justify-center mb-12">
+          <div class="flex flex-col sm:flex-row gap-3 justify-center mb-8">
             <RouterLink to="/courses" class="btn btn-primary">View Courses</RouterLink>
             <RouterLink to="/schedule" class="btn btn-outline">View Schedule</RouterLink>
+          </div>
+
+          <!-- Contributors -->
+          <div class="mb-12">
+            <p class="text-xs uppercase tracking-wide text-base-content/60 mb-3">Powered by</p>
+            <div class="flex flex-wrap items-center justify-center gap-6 opacity-90">
+              <img :src="gpeLogo" alt="GPE contributor" class="h-8 w-auto object-contain" />
+              <img :src="oppositionLogo" alt="Opposition contributor" class="h-8 w-auto object-contain" />
+            </div>
           </div>
 
           <div class="stats stats-vertical lg:stats-horizontal bg-base-100 border border-base-300 rounded-xl shadow-sm">
